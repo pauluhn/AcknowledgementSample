@@ -18,18 +18,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mrd-JW-MRc">
-                                <rect key="frame" x="99.5" y="318.5" width="176" height="30"/>
-                                <state key="normal" title="Show Acknowledgements"/>
-                                <connections>
-                                    <action selector="showAcknowledgements:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7GC-Z3-JNQ"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="a1u-pt-dci">
+                                <rect key="frame" x="112.5" y="293.5" width="150.5" height="80.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Acknowledgements" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="doz-Ze-Fcy">
+                                        <rect key="frame" x="0.0" y="0.0" width="150.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mrd-JW-MRc">
+                                        <rect key="frame" x="0.0" y="20.5" width="150.5" height="30"/>
+                                        <state key="normal" title="Show Default"/>
+                                        <connections>
+                                            <action selector="showDefault:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d1h-g5-bD7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JgG-7L-o7g">
+                                        <rect key="frame" x="0.0" y="50.5" width="150.5" height="30"/>
+                                        <state key="normal" title="Show Custom"/>
+                                        <connections>
+                                            <action selector="showCustom:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5OJ-JR-kFn"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="mrd-JW-MRc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9y9-Xq-bGR"/>
-                            <constraint firstItem="mrd-JW-MRc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="dm1-et-XYK"/>
+                            <constraint firstItem="a1u-pt-dci" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="2h2-Fv-sjv"/>
+                            <constraint firstItem="a1u-pt-dci" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DCN-dz-lgL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
