@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Swiftilities
 
 class ViewController: UIViewController {
 
@@ -15,6 +16,14 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-
+    @IBAction func showAcknowledgements(_ sender: UIButton) {
+        do {
+            let viewModel = try AcknowledgementsListViewModel()
+            let viewController = AcknowledgementsListViewController(viewModel: viewModel)
+            navigationController?.pushViewController(viewController, animated: true)
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
 }
 
